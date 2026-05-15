@@ -73,7 +73,15 @@ export default function FuelStationsPage() {
 
   return (
     <div className="fs-page">
-      <h2 className="fs-page-title">Manage all Fuel Stations</h2>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <h2 className="fs-page-title">Manage all Fuel Stations</h2>
+        <button
+          onClick={fetchStations}
+          style={{ padding: '8px 15px', backgroundColor: '#FFB800', border: 'none', borderRadius: '5px', cursor: 'pointer', fontWeight: 'bold' }}
+        >
+          Refresh Data
+        </button>
+      </div>
 
       {/* --- PENDING SECTION --- */}
       <div className="pending-card">

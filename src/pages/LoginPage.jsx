@@ -71,7 +71,12 @@ export default function LoginPage() {
 
       <main className="login-stage">
         <section className="login-card" aria-label="Admin login">
-          <form className="login-form" onSubmit={onSubmit} noValidate>
+          <form
+            className="login-form"
+            onSubmit={onSubmit}
+            noValidate
+            style={{ width: '560px', maxWidth: '92%', padding: '22px', boxSizing: 'border-box',}}
+          >
             <label htmlFor="username">User name</label>
             <input
               id="username"
@@ -94,7 +99,12 @@ export default function LoginPage() {
             />
             <p className="field-error">{errors.password}</p>
 
-            <button type="submit" className="login-btn" disabled={loading}>
+            <button
+              type="submit"
+              className="login-btn"
+              disabled={loading}
+              style={{minWidth: '120px', whiteSpace: 'nowrap' ,borderRadius:'10px' , textAlign:'center' , minHeight:'35px'}}
+            >
               {loading ? 'Logging in...' : 'Log in'}
             </button>
 
